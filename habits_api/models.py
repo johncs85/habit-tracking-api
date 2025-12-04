@@ -6,7 +6,7 @@ class Habit(models.Model):
     description = models.TextField()
     category = models.IntegerField()
     completions= models.JSONField(default=list)
-    start = models.DateField()
+    start = models.TimeField(null=True, blank=True)
     duration = models.IntegerField()
     days = models.JSONField(default=list)
 
